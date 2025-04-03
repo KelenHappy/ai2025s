@@ -36,7 +36,7 @@
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         // 加载CSV数据
-        d3.csv("results.csv").then(function(data) {
+        d3.csv("excel/results.csv").then(function(data) {
 
             // 设置X轴比例尺
             var x = d3.scaleLinear()
@@ -112,7 +112,7 @@
                     tooltip.transition()
                         .duration(200)
                         .style("opacity", .9);
-                    tooltip.html("<img src='word/" + d.Student + "' alt='Handwriting' width='120' height='120'>")
+                    tooltip.html("<img src='crop/" + d.Student + "' alt='Handwriting' width='120' height='120'>")
                         .style("left", (d3.event.pageX) + "px")
                         .style("top", (d3.event.pageY - 28) + "px");
                 })
